@@ -32,7 +32,7 @@ public final class TermuxAppActivity extends Activity {
         mWebView = new WebView(this);
         WebSettings settings = mWebView.getSettings();
 
-        mWebView.loadUrl("http://localhost:8050");
+        mWebView.loadUrl("http://127.0.0.1:8050");
     }
 
     @Override

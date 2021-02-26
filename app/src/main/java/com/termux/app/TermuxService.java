@@ -27,6 +27,8 @@ import com.termux.terminal.TerminalSession;
 import com.termux.terminal.TerminalSession.SessionChangedCallback;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -281,6 +283,19 @@ public final class TermuxService extends Service implements SessionChangedCallba
 
     TerminalSession createTermSession(String executablePath, String[] arguments, String cwd, boolean failSafe) {
         new File(HOME_PATH).mkdirs();
+        try {
+        FileWriter bash_ini = new FileWriter(new File(HOME_PATH, ".bash_profile"));
+        bash_ini.write("apt update\n");
+        bash_ini.write("apt install -y git openssh\n");
+        bash_ini.write("git clone http://github.com/chengyehwang/jupyterlab\n");
+        bash_ini.write("cd ~/jupyterlab/termux && ./jupyter.sh -M\n");
+        bash_ini.write("echo \"cd ~/jupyterlab/termux\" > ~/.bash_profile\n");
+        bash_ini.write("echo \"~/jupyterlab/termux/jupyter.sh -i\" >> ~/.bash_profile\n");
+        bash_ini.write("echo \"~/jupyterlab/termux/jupyter.sh -d\" >> ~/.bash_profile\n");
+        bash_ini.write("cd ~/jupyterlab/termux && ./jupyter.sh -u\n");
+        bash_ini.close();
+        } catch (IOException ioe) {
+        }
 
         if (cwd == null) cwd = HOME_PATH;
 
