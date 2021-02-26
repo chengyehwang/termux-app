@@ -139,9 +139,6 @@ task downloadBootstraps(){
     doLast {
         def version = "2021.02.19-r1"
         downloadBootstrap("aarch64", "1e3d80bd8cc8771715845ab4a1e67fc125d84c4deda3a1a435116fe4d1f86160", version)
-        downloadBootstrap("arm",     "317a987cab3d4da6f9d42f024a5f25e3aaf8557b8ec68eaf80411fde6b8ea78d", version)
-        downloadBootstrap("i686",    "dd4632350474058fe5dec14b7bd882798bb3e9fe738b2de8c84a51a0b6395f4b", version)
-        downloadBootstrap("x86_64",  "5458119186c3ea631420833e59730461dc2a5faf17b8fad239823c88aa4569ae", version)
     }
 }
 
