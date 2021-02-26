@@ -10,6 +10,7 @@
     <string name="reset_terminal">Reset</string>
     <string name="style_terminal">Style</string>
     <string name="share_transcript_title">Terminal transcript</string>
+    <string name="app">App</string>
     <string name="help">Help</string>
     <string name="toggle_keep_screen_on">Keep screen on</string>
     <string name="autofill_password">Autofill password</string>
