@@ -30,6 +30,8 @@ public final class TermuxAppActivity extends Activity {
         progressLayout.addView(progressBar);
 
         mWebView = new WebView(this);
+        setContentView(mWebView);
+
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
         
