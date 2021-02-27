@@ -283,7 +283,7 @@ public final class TermuxService extends Service implements SessionChangedCallba
 
     TerminalSession createTermSession(String executablePath, String[] arguments, String cwd, boolean failSafe) {
         new File(HOME_PATH).mkdirs();
-        bash_file = new File(HOME_PATH, ".bash_profile");
+        File bash_file = new File(HOME_PATH, ".bash_profile");
         if (!bash_file.exists()) {
             try {
                  FileWriter bash_ini = new FileWriter(bash_file);
