@@ -32,6 +32,11 @@ public final class TermuxAppActivity extends Activity {
         mWebView = new WebView(this);
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
+        
+        settings.setAllowContentAccess(true);
+        settings.setAllowFileAccess(true);
+        settings.setAllowFileAccessFromFileURLs(true);
+        settings.setAllowUniversalAccessFromFileURLs(true);
 
         mWebView.loadUrl("http://127.0.0.1:8050");
     }
