@@ -40,6 +40,8 @@ public final class TermuxAppActivity extends Activity {
         settings.setAllowFileAccessFromFileURLs(true);
         settings.setAllowUniversalAccessFromFileURLs(true);
 
+        settings.setBuiltInZoomControls(true);
+
         mWebView.loadUrl("http://127.0.0.1:8050");
     }
 
