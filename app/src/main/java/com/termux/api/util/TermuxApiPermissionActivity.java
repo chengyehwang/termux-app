@@ -16,7 +16,7 @@ public class TermuxApiPermissionActivity extends Activity {
     /**
      * Intent extra containing the permissions to request.
      */
-    public static final String PERMISSIONS_EXTRA = "com.termux.api.permission_extra";
+    public static final String PERMISSIONS_EXTRA = "com.termux.permission_extra";
 
     /**
      * Check for and request permissions if necessary.
