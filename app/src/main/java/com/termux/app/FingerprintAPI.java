@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -16,8 +16,8 @@ import androidx.biometric.BiometricPrompt;
 import androidx.core.hardware.fingerprint.FingerprintManagerCompat;
 import androidx.fragment.app.FragmentActivity;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiLogger;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiLogger;
 
 import java.util.ArrayList;
 import java.util.List;

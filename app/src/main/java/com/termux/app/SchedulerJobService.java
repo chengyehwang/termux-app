@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 import android.app.job.JobParameters;
 import android.app.job.JobService;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.util.Log;
 public class SchedulerJobService extends JobService {
 
     private static final String LOG_TAG = "TermuxAPISchedulerJob";
-    public static final String SCRIPT_FILE_PATH = "com.termux.api.jobscheduler_script_path";
+    public static final String SCRIPT_FILE_PATH = "com.termux.app.jobscheduler_script_path";
 
     // Constants from TermuxService.
     private static final String TERMUX_SERVICE = "com.termux.app.TermuxService";

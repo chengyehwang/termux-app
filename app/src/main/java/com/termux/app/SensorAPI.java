@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.app.Service;
 import android.content.Context;
@@ -11,8 +11,8 @@ import android.net.LocalSocket;
 import android.net.LocalSocketAddress;
 import android.os.IBinder;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiLogger;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiLogger;
 
 import org.json.JSONArray;
 import org.json.JSONException;

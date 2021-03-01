@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
@@ -11,8 +11,8 @@ import android.provider.Telephony;
 import android.provider.Telephony.TextBasedSmsColumns;
 import android.util.JsonWriter;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.ResultReturner.ResultJsonWriter;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.ResultReturner.ResultJsonWriter;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

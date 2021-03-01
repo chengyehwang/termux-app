@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.app.job.JobInfo;
 import android.app.job.JobScheduler;
@@ -11,7 +11,7 @@ import androidx.annotation.RequiresApi;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.termux.api.util.ResultReturner;
+import com.termux.app.util.ResultReturner;
 
 import java.io.File;
 import java.util.ArrayList;

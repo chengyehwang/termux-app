@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import androidx.annotation.RequiresApi;
 import android.util.Base64;
 import android.util.JsonWriter;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.ResultReturner.ResultJsonWriter;
-import com.termux.api.util.ResultReturner.WithInput;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.ResultReturner.ResultJsonWriter;
+import com.termux.app.util.ResultReturner.WithInput;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

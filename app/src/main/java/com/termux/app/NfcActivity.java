@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -24,7 +24,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.termux.api.util.ResultReturner;
+import com.termux.app.util.ResultReturner;
 
 
 public class NfcActivity extends AppCompatActivity{

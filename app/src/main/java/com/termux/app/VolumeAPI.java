@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.media.AudioManager;
 import android.util.JsonWriter;
 import android.util.SparseArray;
 
-import com.termux.api.util.ResultReturner;
+import com.termux.app.util.ResultReturner;
 
 import java.io.IOException;
 

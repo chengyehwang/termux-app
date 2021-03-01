@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 import com.termux.R;
 
 import android.Manifest;
@@ -43,8 +43,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiPermissionActivity;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiPermissionActivity;
 
 import java.nio.charset.StandardCharsets;
 import java.io.File;

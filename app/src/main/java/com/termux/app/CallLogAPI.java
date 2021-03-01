@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.database.Cursor;
 import android.provider.CallLog;
 import android.util.JsonWriter;
 
-import com.termux.api.util.ResultReturner;
+import com.termux.app.util.ResultReturner;
 
 import java.io.IOException;
 import java.text.DateFormat;

@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.service.notification.NotificationListenerService;
 

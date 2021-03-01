@@ -195,9 +195,9 @@
                   android:name="com.termux.app.TermuxOpenReceiver$ContentProvider" />
 	<meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
 	<meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="true"/>
-        <receiver android:name=".api.TermuxApiReceiver" />
-        <activity android:name="com.termux.api.DialogActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" />
-        <activity android:name="com.termux.api.NfcActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" >
+        <receiver android:name=".app.TermuxApiReceiver" />
+        <activity android:name="com.termux.app.DialogActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" />
+        <activity android:name="com.termux.app.NfcActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
@@ -210,23 +210,23 @@
                   android:noHistory="true"
                   android:excludeFromRecents="true"
                   android:exported="false"/>
-        <activity android:name="com.termux.api.util.TermuxApiPermissionActivity"
+        <activity android:name="com.termux.app.util.TermuxApiPermissionActivity"
                   android:theme="@android:style/Theme.NoDisplay"
                   android:noHistory="true"
                   android:excludeFromRecents="true"
                   android:exported="false"/>
-        <activity android:name="com.termux.api.StorageGetAPI$StorageActivity"
+        <activity android:name="com.termux.app.StorageGetAPI$StorageActivity"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
                   android:excludeFromRecents="true"
                   android:exported="false"/>
-        <service android:name="com.termux.api.SpeechToTextAPI$SpeechToTextService"/>
-        <service android:name="com.termux.api.TextToSpeechAPI$TextToSpeechService" />
+        <service android:name="com.termux.app.SpeechToTextAPI$SpeechToTextService"/>
+        <service android:name="com.termux.app.TextToSpeechAPI$TextToSpeechService" />
         <service android:name=".SensorAPI$SensorReaderService"/>
         <provider android:authorities="com.termux.sharedfiles"
             android:readPermission="com.termux.sharedfiles.READ"
             android:exported="true"
             android:grantUriPermissions="true"
-            android:name="com.termux.api.ShareAPI$ContentProvider" />
+            android:name="com.termux.app.ShareAPI$ContentProvider" />
         <service android:name=".MediaPlayerAPI$PlayerService" android:exported="false"/>
         <service android:name=".MicRecorderAPI$MicRecorderService" android:exported="false"/>
         <service android:name=".WallpaperAPI$WallpaperService"/>

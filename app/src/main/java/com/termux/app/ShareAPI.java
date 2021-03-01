@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 import com.termux.R;
 
 import android.content.ContentValues;
@@ -12,8 +12,8 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiLogger;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.FileNotFoundException;

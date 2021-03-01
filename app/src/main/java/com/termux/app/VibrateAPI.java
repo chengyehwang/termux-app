@@ -1,11 +1,11 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Vibrator;
 
-import com.termux.api.util.ResultReturner;
+import com.termux.app.util.ResultReturner;
 
 public class VibrateAPI {
 

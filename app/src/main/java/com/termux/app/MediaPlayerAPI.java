@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.app.Service;
 import android.content.Context;
@@ -7,8 +7,8 @@ import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.os.PowerManager;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiLogger;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.IOException;

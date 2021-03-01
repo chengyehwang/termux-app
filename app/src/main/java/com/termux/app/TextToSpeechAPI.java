@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.app.IntentService;
 import android.content.Context;
@@ -11,8 +11,8 @@ import android.speech.tts.TextToSpeech.EngineInfo;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.JsonWriter;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiLogger;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiLogger;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

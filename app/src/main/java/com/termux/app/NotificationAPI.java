@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 import com.termux.R;
 
 import android.app.Notification;
@@ -20,8 +20,8 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.app.RemoteInput;
 import androidx.core.util.Pair;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.TermuxApiLogger;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -308,7 +308,7 @@ public class NotificationAPI {
                                                 String buttonText, String buttonAction,
                                                 String notificationId) {
         Intent intent = oldIntent.
-                setClassName("com.termux.api", "com.termux.api.TermuxApiReceiver").
+                setClassName("com.termux.app", "com.termux.app.TermuxApiReceiver").
                 putExtra("api_method", "NotificationReply").
                 putExtra("id", notificationId).
                 putExtra("action", buttonAction).

@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.util.JsonWriter;
 import android.util.SparseArray;
 
-import com.termux.api.util.ResultReturner;
-import com.termux.api.util.ResultReturner.ResultJsonWriter;
+import com.termux.app.util.ResultReturner;
+import com.termux.app.util.ResultReturner.ResultJsonWriter;
 
 public class ContactListAPI {
 

@@ -1,4 +1,4 @@
-package com.termux.api;
+package com.termux.app;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.media.AudioTrack;
 import android.os.Build;
 import android.util.JsonWriter;
 
-import com.termux.api.util.ResultReturner;
+import com.termux.app.util.ResultReturner;
 
 public class AudioAPI {
 
