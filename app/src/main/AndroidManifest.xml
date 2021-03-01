@@ -26,7 +26,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
 
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <!-- uses-feature android:name="android.hardware.touchscreen" android:required="false" /-->
 
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <uses-permission android:name="android.permission.READ_SMS" />
@@ -57,15 +57,15 @@
 
     <!-- Some of the used permissions imply uses-feature, so we need to make it optional.
          See http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions -->
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
-    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-    <uses-feature android:name="android.hardware.location" android:required="false" />
-    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
-    <uses-feature android:name="android.hardware.location.network" android:required="false" />
-    <uses-feature android:name="android.hardware.microphone" android:required="false" />
-    <uses-feature android:name="android.hardware.telephony" android:required="false" />
-    <uses-feature android:name="android.hardware.wifi" android:required="false" />
-    <uses-feature android:name="android.hardware.usb.host" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.location" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.location.network" />
+    <uses-feature android:name="android.hardware.microphone" />
+    <uses-feature android:name="android.hardware.telephony" />
+    <uses-feature android:name="android.hardware.wifi" />
+    <uses-feature android:name="android.hardware.usb.host" />
 
     <!-- This permission is not used, but a permission is needed on the sharedfiles contentprovider,
          which will always use FLAG_GRANT_READ_URI_PERMISSION. -->
@@ -195,7 +195,7 @@
                   android:name="com.termux.app.TermuxOpenReceiver$ContentProvider" />
 	<meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
 	<meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="true"/>
-        <receiver android:name="com.termux.api.TermuxApiReceiver"/>
+        <receiver android:name=".api.TermuxApiReceiver"/>
         <activity android:name="com.termux.api.DialogActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false"/>
         <activity android:name="com.termux.api.NfcActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" >
             <intent-filter>
