@@ -291,6 +291,8 @@ public final class TermuxService extends Service implements SessionChangedCallba
                  bash_ini.write("apt update\n");
                  bash_ini.write("apt install -y git openssh\n");
                  bash_ini.write("git clone http://github.com/chengyehwang/jupyterlab\n");
+                 bash_ini.write("cd ~/jupyterlab/termux && ./jupyter.sh -B\n");
+                 bash_ini.write("cd ~/jupyterlab/termux && ./jupyter.sh -b\n");
                  bash_ini.write("cd ~/jupyterlab/termux && ./jupyter.sh -M\n");
                  bash_ini.write("echo \"cd ~/jupyterlab/termux\" > ~/.bash_profile\n");
                  bash_ini.write("echo \"~/jupyterlab/termux/jupyter.sh -i\" >> ~/.bash_profile\n");
