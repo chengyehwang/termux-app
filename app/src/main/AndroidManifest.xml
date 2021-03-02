@@ -195,7 +195,6 @@
                   android:name="com.termux.app.TermuxOpenReceiver$ContentProvider" />
 	<meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
 	<meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="true"/>
-        <receiver android:name=".app.TermuxApiReceiver" />
         <activity android:name="com.termux.app.DialogActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" />
         <activity android:name="com.termux.app.NfcActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" >
             <intent-filter>

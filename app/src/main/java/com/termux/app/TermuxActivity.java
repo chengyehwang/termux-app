@@ -54,6 +54,7 @@ import com.termux.terminal.TerminalSession;
 import com.termux.terminal.TerminalSession.SessionChangedCallback;
 import com.termux.terminal.TextStyle;
 import com.termux.view.TerminalView;
+import com.termux.app.TermuxApiReceiver;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -102,6 +103,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     private static final int REQUESTCODE_PERMISSION_STORAGE = 1234;
 
     private static final String RELOAD_STYLE_ACTION = "com.termux.app.reload_style";
+    private static final String TERMUX_API_ACTION = "com.termux.app.TermuxApiReceiver";
 
     private static final String BROADCAST_TERMUX_OPENED = "com.termux.app.OPENED";
 
@@ -145,6 +147,11 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
     private final BroadcastReceiver mBroadcastReceiever = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
+            String apiMethod = intent.getStringExtra("api_method");
+            if (apiMethod != null) {
+                new TermuxApiReceiver().doWork(context, intent);
+                return;
+            }
             if (mIsVisible) {
                 String whatToReload = intent.getStringExtra(RELOAD_STYLE_ACTION);
                 if ("storage".equals(whatToReload)) {
@@ -605,8 +612,10 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
             switchToSession(getStoredCurrentSessionOrLast());
             mListViewAdapter.notifyDataSetChanged();
         }
-
-        registerReceiver(mBroadcastReceiever, new IntentFilter(RELOAD_STYLE_ACTION));
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(RELOAD_STYLE_ACTION);
+        filter.addAction(TERMUX_API_ACTION);
+        registerReceiver(mBroadcastReceiever, filter);
 
         // The current terminal session may have changed while being away, force
         // a refresh of the displayed terminal:
