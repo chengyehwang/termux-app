@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import org.junit.Assert;
 import org.junit.Test;

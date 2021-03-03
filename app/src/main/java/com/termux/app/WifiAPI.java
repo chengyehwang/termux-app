@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -12,7 +12,7 @@ import android.text.TextUtils;
 import android.text.format.Formatter;
 import android.util.JsonWriter;
 
-import com.termux.app.util.ResultReturner;
+import com.termuxPlus.app.util.ResultReturner;
 
 import java.util.List;
 

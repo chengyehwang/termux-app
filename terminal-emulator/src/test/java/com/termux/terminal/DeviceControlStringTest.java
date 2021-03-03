@@ -1,4 +1,4 @@
-package com.termux.terminal;
+package com.termuxPlus.terminal;
 
 /**
  * "\033P" is a device control string.

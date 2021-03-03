@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
@@ -10,8 +10,8 @@ import android.os.Build;
 import android.provider.Settings;
 import android.widget.Toast;
 
-import com.termux.app.util.TermuxApiLogger;
-import com.termux.app.util.TermuxApiPermissionActivity;
+import com.termuxPlus.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.TermuxApiPermissionActivity;
 
 public class TermuxApiReceiver extends BroadcastReceiver {
 

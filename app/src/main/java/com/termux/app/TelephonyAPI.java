@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -14,7 +14,7 @@ import android.telephony.TelephonyManager;
 import android.util.JsonWriter;
 import android.util.Log;
 
-import com.termux.app.util.ResultReturner;
+import com.termuxPlus.app.util.ResultReturner;
 
 import java.io.IOException;
 

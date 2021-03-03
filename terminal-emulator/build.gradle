@@ -57,7 +57,7 @@ dependencies {
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'com.termux'
+            groupId 'com.termuxPlus'
             artifactId 'terminal-emulator'
             version '0.106.1'
             artifact("$buildDir/outputs/aar/terminal-emulator-release.aar")
@@ -67,7 +67,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/termux/termux-app")
+            url = uri("https://maven.pkg.github.com.termuxPlus/termux-app")
 
             credentials {
                 username = System.getenv("GH_USERNAME")

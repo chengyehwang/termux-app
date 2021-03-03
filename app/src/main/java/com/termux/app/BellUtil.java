@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.os.Handler;

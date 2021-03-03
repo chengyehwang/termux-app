@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -47,14 +47,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.termux.R;
-import com.termux.terminal.EmulatorDebug;
-import com.termux.terminal.TerminalColors;
-import com.termux.terminal.TerminalSession;
-import com.termux.terminal.TerminalSession.SessionChangedCallback;
-import com.termux.terminal.TextStyle;
-import com.termux.view.TerminalView;
-import com.termux.app.TermuxApiReceiver;
+import com.termuxPlus.R;
+import com.termuxPlus.terminal.EmulatorDebug;
+import com.termuxPlus.terminal.TerminalColors;
+import com.termuxPlus.terminal.TerminalSession;
+import com.termuxPlus.terminal.TerminalSession.SessionChangedCallback;
+import com.termuxPlus.terminal.TextStyle;
+import com.termuxPlus.view.TerminalView;
+import com.termuxPlus.app.TermuxApiReceiver;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -85,7 +85,7 @@ import androidx.viewpager.widget.ViewPager;
  */
 public final class TermuxActivity extends Activity implements ServiceConnection {
 
-    public static final String TERMUX_FAILSAFE_SESSION_ACTION = "com.termux.app.failsafe_session";
+    public static final String TERMUX_FAILSAFE_SESSION_ACTION = "com.termuxPlus.app.failsafe_session";
 
     private static final int CONTEXTMENU_SELECT_URL_ID = 0;
     private static final int CONTEXTMENU_SHARE_TRANSCRIPT_ID = 1;
@@ -102,10 +102,10 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
 
     private static final int REQUESTCODE_PERMISSION_STORAGE = 1234;
 
-    private static final String RELOAD_STYLE_ACTION = "com.termux.app.reload_style";
-    private static final String TERMUX_API_ACTION = "com.termux.app.TermuxApiReceiver";
+    private static final String RELOAD_STYLE_ACTION = "com.termuxPlus.app.reload_style";
+    private static final String TERMUX_API_ACTION = "com.termuxPlus.app.TermuxApiReceiver";
 
-    private static final String BROADCAST_TERMUX_OPENED = "com.termux.app.OPENED";
+    private static final String BROADCAST_TERMUX_OPENED = "com.termuxPlus.app.OPENED";
 
     /** The main view of the activity showing the terminal. Initialized in onCreate(). */
     @SuppressWarnings("NullableProblems")
@@ -171,8 +171,8 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
 
     void checkForFontAndColors() {
         try {
-            @SuppressLint("SdCardPath") File fontFile = new File("/data/data/com.termux/files/home/.termux/font.ttf");
-            @SuppressLint("SdCardPath") File colorsFile = new File("/data/data/com.termux/files/home/.termux/colors.properties");
+            @SuppressLint("SdCardPath") File fontFile = new File("/data/data/com.termuxPlus/files/home/.termux/font.ttf");
+            @SuppressLint("SdCardPath") File colorsFile = new File("/data/data/com.termuxPlus/files/home/.termux/colors.properties");
 
             final Properties props = new Properties();
             if (colorsFile.isFile()) {
@@ -880,7 +880,7 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setType("text/plain");
                     String transcriptText = session.getEmulator().getScreen().getTranscriptTextWithoutJoinedLines().trim();
-                    // See https://github.com/termux/termux-app/issues/1166.
+                    // See https://github.com.termuxPlus/termux-app/issues/1166.
                     final int MAX_LENGTH = 100_000;
                     if (transcriptText.length() > MAX_LENGTH) {
                         int cutOffIndex = transcriptText.length() - MAX_LENGTH;
@@ -918,14 +918,14 @@ public final class TermuxActivity extends Activity implements ServiceConnection 
             }
             case CONTEXTMENU_STYLING_ID: {
                 Intent stylingIntent = new Intent();
-                stylingIntent.setClassName("com.termux.styling", "com.termux.styling.TermuxStyleActivity");
+                stylingIntent.setClassName("com.termuxPlus.styling", "com.termuxPlus.styling.TermuxStyleActivity");
                 try {
                     startActivity(stylingIntent);
                 } catch (ActivityNotFoundException | IllegalArgumentException e) {
                     // The startActivity() call is not documented to throw IllegalArgumentException.
                     // However, crash reporting shows that it sometimes does, so catch it here.
                     new AlertDialog.Builder(this).setMessage(R.string.styling_not_installed)
-                        .setPositiveButton(R.string.styling_install, (dialog, which) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://f-droid.org/en/packages/com.termux.styling/")))).setNegativeButton(android.R.string.cancel, null).show();
+                        .setPositiveButton(R.string.styling_install, (dialog, which) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://f-droid.org/en/packages/com.termuxPlus.styling/")))).setNegativeButton(android.R.string.cancel, null).show();
                 }
                 return true;
             }

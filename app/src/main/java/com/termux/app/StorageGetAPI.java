@@ -1,12 +1,12 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -16,7 +16,7 @@ import java.io.OutputStream;
 
 public class StorageGetAPI {
 
-    private static final String FILE_EXTRA = "com.termux.app.storage.file";
+    private static final String FILE_EXTRA = "com.termuxPlus.app.storage.file";
 
     static void onReceive(TermuxApiReceiver apiReceiver, final Context context, final Intent intent) {
         ResultReturner.returnData(apiReceiver, intent, out -> {

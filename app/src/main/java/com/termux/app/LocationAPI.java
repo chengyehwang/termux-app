@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import android.os.SystemClock;
 import android.util.JsonWriter;
 import android.util.Log;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.ResultReturner.ResultJsonWriter;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.ResultReturner.ResultJsonWriter;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.IOException;
 

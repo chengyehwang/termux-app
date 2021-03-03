@@ -1,11 +1,11 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.content.Intent;
 import android.media.MediaScannerConnection;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.PrintWriter;

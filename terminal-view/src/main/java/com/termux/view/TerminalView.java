@@ -1,4 +1,4 @@
-package com.termux.view;
+package com.termuxPlus.view;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
@@ -40,12 +40,12 @@ import android.widget.Scroller;
 
 import androidx.annotation.RequiresApi;
 
-import com.termux.terminal.EmulatorDebug;
-import com.termux.terminal.KeyHandler;
-import com.termux.terminal.TerminalBuffer;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
-import com.termux.terminal.WcWidth;
+import com.termuxPlus.terminal.EmulatorDebug;
+import com.termuxPlus.terminal.KeyHandler;
+import com.termuxPlus.terminal.TerminalBuffer;
+import com.termuxPlus.terminal.TerminalEmulator;
+import com.termuxPlus.terminal.TerminalSession;
+import com.termuxPlus.terminal.WcWidth;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -260,21 +260,21 @@ public final class TerminalView extends View {
         if (props.getProperty("enforce-char-based-input", "false").equals("true")) {
             // Some keyboards seems do not reset the internal state on TYPE_NULL.
             // Affects mostly Samsung stock keyboards.
-            // https://github.com/termux/termux-app/issues/686
+            // https://github.com.termuxPlus/termux-app/issues/686
             outAttrs.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD | InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS;
         } else {
             // Using InputType.NULL is the most correct input type and avoids issues with other hacks.
             //
             // Previous keyboard issues:
-            // https://github.com/termux/termux-packages/issues/25
-            // https://github.com/termux/termux-app/issues/87.
-            // https://github.com/termux/termux-app/issues/126.
-            // https://github.com/termux/termux-app/issues/137 (japanese chars and TYPE_NULL).
+            // https://github.com.termuxPlus/termux-packages/issues/25
+            // https://github.com.termuxPlus/termux-app/issues/87.
+            // https://github.com.termuxPlus/termux-app/issues/126.
+            // https://github.com.termuxPlus/termux-app/issues/137 (japanese chars and TYPE_NULL).
             outAttrs.inputType = InputType.TYPE_NULL;
         }
 
         // Note that IME_ACTION_NONE cannot be used as that makes it impossible to input newlines using the on-screen
-        // keyboard on Android TV (see https://github.com/termux/termux-app/issues/221).
+        // keyboard on Android TV (see https://github.com.termuxPlus/termux-app/issues/221).
         outAttrs.imeOptions = EditorInfo.IME_FLAG_NO_FULLSCREEN;
 
         return new BaseInputConnection(this, true) {

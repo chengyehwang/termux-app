@@ -1,10 +1,10 @@
-package com.termux.view;
+package com.termuxPlus.view;
 
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 
-import com.termux.terminal.TerminalSession;
+import com.termuxPlus.terminal.TerminalSession;
 
 /**
  * Input and scale listener which may be set on a {@link TerminalView} through

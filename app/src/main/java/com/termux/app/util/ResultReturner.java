@@ -1,4 +1,4 @@
-package com.termux.app.util;
+package com.termuxPlus.app.util;
 
 import android.app.Activity;
 import android.app.IntentService;

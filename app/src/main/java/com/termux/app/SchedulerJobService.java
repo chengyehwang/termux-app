@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 import android.app.job.JobParameters;
 import android.app.job.JobService;
 import android.content.Context;
@@ -11,12 +11,12 @@ import android.util.Log;
 public class SchedulerJobService extends JobService {
 
     private static final String LOG_TAG = "TermuxAPISchedulerJob";
-    public static final String SCRIPT_FILE_PATH = "com.termux.app.jobscheduler_script_path";
+    public static final String SCRIPT_FILE_PATH = "com.termuxPlus.app.jobscheduler_script_path";
 
     // Constants from TermuxService.
-    private static final String TERMUX_SERVICE = "com.termux.app.TermuxService";
-    private static final String ACTION_EXECUTE = "com.termux.service_execute";
-    private static final String EXTRA_EXECUTE_IN_BACKGROUND = "com.termux.execute.background";
+    private static final String TERMUX_SERVICE = "com.termuxPlus.app.TermuxService";
+    private static final String ACTION_EXECUTE = "com.termuxPlus.service_execute";
+    private static final String EXTRA_EXECUTE_IN_BACKGROUND = "com.termuxPlus.execute.background";
 
     @Override
     public boolean onStartJob(JobParameters params) {
@@ -25,9 +25,9 @@ public class SchedulerJobService extends JobService {
         PersistableBundle extras = params.getExtras();
         String filePath = extras.getString(SCRIPT_FILE_PATH);
 
-        Uri scriptUri = new Uri.Builder().scheme("com.termux.file").path(filePath).build();
+        Uri scriptUri = new Uri.Builder().scheme("com.termuxPlus.file").path(filePath).build();
         Intent executeIntent = new Intent(ACTION_EXECUTE, scriptUri);
-        executeIntent.setClassName("com.termux", TERMUX_SERVICE);
+        executeIntent.setClassName("com.termuxPlus", TERMUX_SERVICE);
         executeIntent.putExtra(EXTRA_EXECUTE_IN_BACKGROUND, true);
 
         Context context = getApplicationContext();

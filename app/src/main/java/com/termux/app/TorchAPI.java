@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.widget.Toast;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 public class TorchAPI {
     private static Camera legacyCamera;

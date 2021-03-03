@@ -1,11 +1,11 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
-import com.termux.app.util.ResultReturner;
+import com.termuxPlus.app.util.ResultReturner;
 
 public class BrightnessAPI {
 

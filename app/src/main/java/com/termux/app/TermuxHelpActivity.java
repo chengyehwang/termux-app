@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;

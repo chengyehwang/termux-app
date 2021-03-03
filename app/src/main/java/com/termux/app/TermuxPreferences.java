@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,7 +7,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.util.TypedValue;
 import android.widget.Toast;
-import com.termux.terminal.TerminalSession;
+import com.termuxPlus.terminal.TerminalSession;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,7 +28,7 @@ import java.util.Properties;
 
 import androidx.annotation.IntDef;
 
-import static com.termux.terminal.EmulatorDebug.LOG_TAG;
+import static com.termuxPlus.terminal.EmulatorDebug.LOG_TAG;
 
 final class TermuxPreferences {
 

@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -11,8 +11,8 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.WindowManager;
 
-import com.termux.R;
-import com.termux.terminal.EmulatorDebug;
+import com.termuxPlus.R;
+import com.termuxPlus.terminal.EmulatorDebug;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

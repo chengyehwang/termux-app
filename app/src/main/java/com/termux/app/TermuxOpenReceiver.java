@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
@@ -14,7 +14,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
 
-import com.termux.terminal.EmulatorDebug;
+import com.termuxPlus.terminal.EmulatorDebug;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -87,7 +87,7 @@ public class TermuxOpenReceiver extends BroadcastReceiver {
             contentTypeToUse = contentTypeExtra;
         }
 
-        Uri uriToShare = Uri.parse("content://com.termux.files" + fileToShare.getAbsolutePath());
+        Uri uriToShare = Uri.parse("content://com.termuxPlus.files" + fileToShare.getAbsolutePath());
 
         if (Intent.ACTION_SEND.equals(intentAction)) {
             sendIntent.putExtra(Intent.EXTRA_STREAM, uriToShare);

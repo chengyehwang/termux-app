@@ -1,14 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.termux"
+    package="com.termuxPlus"
     android:installLocation="internalOnly"
-    android:sharedUserId="com.termux"
+    android:sharedUserId="com.termuxPlus"
     android:sharedUserLabel="@string/shared_user_label" >
 
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
     <uses-feature android:name="android.software.leanback" android:required="false" />
 
-    <permission android:name="com.termux.permission.RUN_COMMAND"
+    <permission android:name="com.termuxPlus.permission.RUN_COMMAND"
         android:label="@string/run_command_permission_label"
         android:description="@string/run_command_permission_description"
         android:icon="@mipmap/ic_launcher"
@@ -69,7 +69,7 @@
 
     <!-- This permission is not used, but a permission is needed on the sharedfiles contentprovider,
          which will always use FLAG_GRANT_READ_URI_PERMISSION. -->
-    <permission android:name="com.termux.sharedfiles.READ" android:protectionLevel="signature" />
+    <permission android:name="com.termuxPlus.sharedfiles.READ" android:protectionLevel="signature" />
     <application
         android:usesCleartextTraffic="true"
         android:extractNativeLibs="true"
@@ -86,7 +86,7 @@
         <meta-data android:name="android.max_aspect" android:value="10.0" />
 
         <activity
-            android:name="com.termux.app.TermuxActivity"
+            android:name="com.termuxPlus.app.TermuxActivity"
 	    android:label="@string/application_name"
 	    android:configChanges="orientation|screenSize|smallestScreenSize|density|screenLayout|uiMode|keyboard|keyboardHidden|navigation"
             android:launchMode="singleTask"
@@ -104,7 +104,7 @@
         </activity>
 
         <activity
-            android:name="com.termux.app.TermuxAppActivity"
+            android:name="com.termuxPlus.app.TermuxAppActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Material.Light.DarkActionBar"
             android:parentActivityName=".app.TermuxActivity"
@@ -112,7 +112,7 @@
             android:label="@string/application_name" />
 
         <activity
-            android:name="com.termux.app.TermuxHelpActivity"
+            android:name="com.termuxPlus.app.TermuxHelpActivity"
             android:exported="false"
             android:theme="@android:style/Theme.Material.Light.DarkActionBar"
             android:parentActivityName=".app.TermuxActivity"
@@ -120,9 +120,9 @@
             android:label="@string/application_name" />
 
         <activity
-            android:name="com.termux.filepicker.TermuxFileReceiverActivity"
+            android:name="com.termuxPlus.filepicker.TermuxFileReceiverActivity"
             android:label="@string/application_name"
-            android:taskAffinity="com.termux.filereceiver"
+            android:taskAffinity="com.termuxPlus.filereceiver"
             android:excludeFromRecents="true"
             android:resizeableActivity="true"
             android:noHistory="true">
@@ -152,7 +152,7 @@
 
         <activity-alias
             android:name=".HomeActivity"
-            android:targetActivity="com.termux.app.TermuxActivity">
+            android:targetActivity="com.termuxPlus.app.TermuxActivity">
 
             <!-- Launch activity automatically on boot on Android Things devices -->
             <intent-filter>
@@ -164,7 +164,7 @@
 
         <provider
             android:name=".filepicker.TermuxDocumentsProvider"
-            android:authorities="com.termux.documents"
+            android:authorities="com.termuxPlus.documents"
             android:grantUriPermissions="true"
             android:exported="true"
             android:permission="android.permission.MANAGE_DOCUMENTS">
@@ -174,29 +174,29 @@
         </provider>
 
         <service
-            android:name="com.termux.app.TermuxService"
+            android:name="com.termuxPlus.app.TermuxService"
             android:exported="false" />
 
         <service
             android:name=".app.RunCommandService"
             android:exported="true"
-            android:permission="com.termux.permission.RUN_COMMAND" >
+            android:permission="com.termuxPlus.permission.RUN_COMMAND" >
             <intent-filter>
-                <action android:name="com.termux.RUN_COMMAND" />
+                <action android:name="com.termuxPlus.RUN_COMMAND" />
             </intent-filter>
         </service>
 
         <receiver android:name=".app.TermuxOpenReceiver" />
 
-        <provider android:authorities="com.termux.files"
+        <provider android:authorities="com.termuxPlus.files"
                   android:readPermission="android.permission.permRead"
                   android:exported="true"
                   android:grantUriPermissions="true"
-                  android:name="com.termux.app.TermuxOpenReceiver$ContentProvider" />
+                  android:name="com.termuxPlus.app.TermuxOpenReceiver$ContentProvider" />
 	<meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
 	<meta-data android:name="com.samsung.android.multidisplay.keep_process_alive" android:value="true"/>
-        <activity android:name="com.termux.app.DialogActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" />
-        <activity android:name="com.termux.app.NfcActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" >
+        <activity android:name="com.termuxPlus.app.DialogActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" />
+        <activity android:name="com.termuxPlus.app.NfcActivity" android:theme="@style/DialogTheme" android:noHistory="true" android:excludeFromRecents="true" android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
@@ -209,23 +209,23 @@
                   android:noHistory="true"
                   android:excludeFromRecents="true"
                   android:exported="false"/>
-        <activity android:name="com.termux.app.util.TermuxApiPermissionActivity"
+        <activity android:name="com.termuxPlus.app.util.TermuxApiPermissionActivity"
                   android:theme="@android:style/Theme.NoDisplay"
                   android:noHistory="true"
                   android:excludeFromRecents="true"
                   android:exported="false"/>
-        <activity android:name="com.termux.app.StorageGetAPI$StorageActivity"
+        <activity android:name="com.termuxPlus.app.StorageGetAPI$StorageActivity"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar"
                   android:excludeFromRecents="true"
                   android:exported="false"/>
-        <service android:name="com.termux.app.SpeechToTextAPI$SpeechToTextService"/>
-        <service android:name="com.termux.app.TextToSpeechAPI$TextToSpeechService" />
+        <service android:name="com.termuxPlus.app.SpeechToTextAPI$SpeechToTextService"/>
+        <service android:name="com.termuxPlus.app.TextToSpeechAPI$TextToSpeechService" />
         <service android:name=".SensorAPI$SensorReaderService"/>
-        <provider android:authorities="com.termux.sharedfiles"
-            android:readPermission="com.termux.sharedfiles.READ"
+        <provider android:authorities="com.termuxPlus.sharedfiles"
+            android:readPermission="com.termuxPlus.sharedfiles.READ"
             android:exported="true"
             android:grantUriPermissions="true"
-            android:name="com.termux.app.ShareAPI$ContentProvider" />
+            android:name="com.termuxPlus.app.ShareAPI$ContentProvider" />
         <service android:name=".MediaPlayerAPI$PlayerService" android:exported="false"/>
         <service android:name=".MicRecorderAPI$MicRecorderService" android:exported="false"/>
         <service android:name=".WallpaperAPI$WallpaperService"/>

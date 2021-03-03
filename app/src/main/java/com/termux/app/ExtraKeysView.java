@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -28,8 +28,8 @@ import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.PopupWindow;
 
-import com.termux.R;
-import com.termux.view.TerminalView;
+import com.termuxPlus.R;
+import com.termuxPlus.view.TerminalView;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 

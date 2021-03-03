@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,8 +20,8 @@ import android.util.Size;
 import android.view.Surface;
 import android.view.WindowManager;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.FileOutputStream;

@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.media.AudioManager;
@@ -8,10 +8,10 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.inputmethod.InputMethodManager;
 
-import com.termux.terminal.KeyHandler;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
-import com.termux.view.TerminalViewClient;
+import com.termuxPlus.terminal.KeyHandler;
+import com.termuxPlus.terminal.TerminalEmulator;
+import com.termuxPlus.terminal.TerminalSession;
+import com.termuxPlus.view.TerminalViewClient;
 
 import java.util.List;
 
@@ -89,7 +89,7 @@ public final class TermuxViewClient implements TerminalViewClient {
                 mActivity.doPaste();
             } else if (unicodeChar == '+' || e.getUnicodeChar(KeyEvent.META_SHIFT_ON) == '+') {
                 // We also check for the shifted char here since shift may be required to produce '+',
-                // see https://github.com/termux/termux-api/issues/2
+                // see https://github.com.termuxPlus/termux-api/issues/2
                 mActivity.changeFontSize(true);
             } else if (unicodeChar == '-') {
                 mActivity.changeFontSize(false);

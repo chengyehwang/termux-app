@@ -1,5 +1,5 @@
-package com.termux.app;
-import com.termux.R;
+package com.termuxPlus.app;
+import com.termuxPlus.R;
 
 import android.Manifest;
 import android.app.Activity;
@@ -43,8 +43,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiPermissionActivity;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiPermissionActivity;
 
 import java.nio.charset.StandardCharsets;
 import java.io.File;
@@ -66,10 +66,10 @@ public class DialogActivity extends AppCompatActivity {
     private boolean resultReturned = false;
 
     protected boolean getBlackUI() {
-        File propsFile = new File("/data/data/com.termux/files/home/.termux/termux.properties");
+        File propsFile = new File("/data/data/com.termuxPlus/files/home/.termux/termux.properties");
 
         if (!propsFile.exists())
-            propsFile = new File("/data/data/com.termux/files/home/.config/termux.properties");
+            propsFile = new File("/data/data/com.termuxPlus/files/home/.config/termux.properties");
 
         boolean mUseBlackUi = false;
 
@@ -710,7 +710,7 @@ public class DialogActivity extends AppCompatActivity {
             for (final ActivityManager.RunningAppProcessInfo processInfo : runningProcesses) {
                 if (processInfo.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
                     for (final String activeProcess : processInfo.pkgList) {
-                        if (activeProcess.equals("com.termux")) {
+                        if (activeProcess.equals("com.termuxPlus")) {
                             return true;
                         }
                     }

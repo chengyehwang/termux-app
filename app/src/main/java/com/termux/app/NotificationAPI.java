@@ -1,5 +1,5 @@
-package com.termux.app;
-import com.termux.R;
+package com.termuxPlus.app;
+import com.termuxPlus.R;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -20,8 +20,8 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.app.RemoteInput;
 import androidx.core.util.Pair;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -32,11 +32,11 @@ import java.util.UUID;
 
 public class NotificationAPI {
 
-    public static final String TERMUX_SERVICE = "com.termux.app.TermuxService";
-    public static final String ACTION_EXECUTE = "com.termux.service_execute";
-    public static final String EXTRA_ARGUMENTS = "com.termux.execute.arguments";
-    public static final String BIN_SH = "/data/data/com.termux/files/usr/bin/sh";
-    private static final String EXTRA_EXECUTE_IN_BACKGROUND = "com.termux.execute.background";
+    public static final String TERMUX_SERVICE = "com.termuxPlus.app.TermuxService";
+    public static final String ACTION_EXECUTE = "com.termuxPlus.service_execute";
+    public static final String EXTRA_ARGUMENTS = "com.termuxPlus.execute.arguments";
+    public static final String BIN_SH = "/data/data/com.termuxPlus/files/usr/bin/sh";
+    private static final String EXTRA_EXECUTE_IN_BACKGROUND = "com.termuxPlus.execute.background";
     private static final String CHANNEL_ID = "termux-notification";
     private static final String CHANNEL_TITLE = "Termux API notification channel";
     private static final String KEY_TEXT_REPLY = "TERMUX_TEXT_REPLY";
@@ -308,7 +308,7 @@ public class NotificationAPI {
                                                 String buttonText, String buttonAction,
                                                 String notificationId) {
         Intent intent = oldIntent.
-                setClassName("com.termux.app", "com.termux.app.TermuxApiReceiver").
+                setClassName("com.termuxPlus.app", "com.termuxPlus.app.TermuxApiReceiver").
                 putExtra("api_method", "NotificationReply").
                 putExtra("id", notificationId).
                 putExtra("action", buttonAction).
@@ -358,12 +358,12 @@ public class NotificationAPI {
 
     static Intent createExecuteIntent(String action){
         String[] arguments = new String[]{"-c", action};
-        Uri executeUri = new Uri.Builder().scheme("com.termux.file")
+        Uri executeUri = new Uri.Builder().scheme("com.termuxPlus.file")
                 .path(BIN_SH)
                 .appendQueryParameter("arguments", Arrays.toString(arguments))
                 .build();
         Intent executeIntent = new Intent(ACTION_EXECUTE, executeUri);
-        executeIntent.setClassName("com.termux", TERMUX_SERVICE);
+        executeIntent.setClassName("com.termuxPlus", TERMUX_SERVICE);
         executeIntent.putExtra(EXTRA_EXECUTE_IN_BACKGROUND, true);
         executeIntent.putExtra(EXTRA_ARGUMENTS, arguments);
         return executeIntent;

@@ -1,5 +1,5 @@
-package com.termux.app;
-import com.termux.R;
+package com.termuxPlus.app;
+import com.termuxPlus.R;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -12,8 +12,8 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.webkit.MimeTypeMap;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -82,7 +82,7 @@ public class ShareAPI {
 
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(finalIntentAction);
-                Uri uriToShare = Uri.parse("content://com.termux.sharedfiles" + fileToShare.getAbsolutePath());
+                Uri uriToShare = Uri.parse("content://com.termuxPlus.sharedfiles" + fileToShare.getAbsolutePath());
                 sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
                 String contentTypeToUse;

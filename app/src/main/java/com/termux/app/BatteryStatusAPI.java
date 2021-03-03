@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,9 +6,9 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.util.JsonWriter;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.ResultReturner.ResultJsonWriter;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.ResultReturner.ResultJsonWriter;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 public class BatteryStatusAPI {
 

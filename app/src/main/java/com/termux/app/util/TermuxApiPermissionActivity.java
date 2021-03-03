@@ -1,4 +1,4 @@
-package com.termux.app.util;
+package com.termuxPlus.app.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -16,7 +16,7 @@ public class TermuxApiPermissionActivity extends Activity {
     /**
      * Intent extra containing the permissions to request.
      */
-    public static final String PERMISSIONS_EXTRA = "com.termux.permission_extra";
+    public static final String PERMISSIONS_EXTRA = "com.termuxPlus.permission_extra";
 
     /**
      * Check for and request permissions if necessary.

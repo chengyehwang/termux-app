@@ -1,4 +1,4 @@
-package com.termux.filepicker;
+package com.termuxPlus.filepicker;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -9,9 +9,9 @@ import android.provider.OpenableColumns;
 import android.util.Log;
 import android.util.Patterns;
 
-import com.termux.R;
-import com.termux.app.DialogUtils;
-import com.termux.app.TermuxService;
+import com.termuxPlus.R;
+import com.termuxPlus.app.DialogUtils;
+import com.termuxPlus.app.TermuxService;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;

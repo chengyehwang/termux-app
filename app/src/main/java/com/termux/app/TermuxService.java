@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -21,10 +21,10 @@ import android.provider.Settings;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 
-import com.termux.R;
-import com.termux.terminal.EmulatorDebug;
-import com.termux.terminal.TerminalSession;
-import com.termux.terminal.TerminalSession.SessionChangedCallback;
+import com.termuxPlus.R;
+import com.termuxPlus.terminal.EmulatorDebug;
+import com.termuxPlus.terminal.TerminalSession;
+import com.termuxPlus.terminal.TerminalSession.SessionChangedCallback;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -50,22 +50,22 @@ public final class TermuxService extends Service implements SessionChangedCallba
 
     /** Note that this is a symlink on the Android M preview. */
     @SuppressLint("SdCardPath")
-    public static final String FILES_PATH = "/data/data/com.termux/files";
+    public static final String FILES_PATH = "/data/data/com.termuxPlus/files";
     public static final String PREFIX_PATH = FILES_PATH + "/usr";
     public static final String HOME_PATH = FILES_PATH + "/home";
 
     private static final int NOTIFICATION_ID = 1337;
 
-    private static final String ACTION_STOP_SERVICE = "com.termux.service_stop";
-    private static final String ACTION_LOCK_WAKE = "com.termux.service_wake_lock";
-    private static final String ACTION_UNLOCK_WAKE = "com.termux.service_wake_unlock";
+    private static final String ACTION_STOP_SERVICE = "com.termuxPlus.service_stop";
+    private static final String ACTION_LOCK_WAKE = "com.termuxPlus.service_wake_lock";
+    private static final String ACTION_UNLOCK_WAKE = "com.termuxPlus.service_wake_unlock";
     /** Intent action to launch a new terminal session. Executed from TermuxWidgetProvider. */
-    public static final String ACTION_EXECUTE = "com.termux.service_execute";
+    public static final String ACTION_EXECUTE = "com.termuxPlus.service_execute";
 
-    public static final String EXTRA_ARGUMENTS = "com.termux.execute.arguments";
+    public static final String EXTRA_ARGUMENTS = "com.termuxPlus.execute.arguments";
 
-    public static final String EXTRA_CURRENT_WORKING_DIRECTORY = "com.termux.execute.cwd";
-    public static final String EXTRA_EXECUTE_IN_BACKGROUND = "com.termux.execute.background";
+    public static final String EXTRA_CURRENT_WORKING_DIRECTORY = "com.termuxPlus.execute.cwd";
+    public static final String EXTRA_EXECUTE_IN_BACKGROUND = "com.termuxPlus.execute.background";
 
     /** This service is only bound from inside the same process and never uses IPC. */
     class LocalBinder extends Binder {
@@ -341,8 +341,8 @@ public final class TermuxService extends Service implements SessionChangedCallba
         updateNotification();
 
         // Make sure that terminal styling is always applied.
-        Intent stylingIntent = new Intent("com.termux.app.reload_style");
-        stylingIntent.putExtra("com.termux.app.reload_style", "styling");
+        Intent stylingIntent = new Intent("com.termuxPlus.app.reload_style");
+        stylingIntent.putExtra("com.termuxPlus.app.reload_style", "styling");
         sendBroadcast(stylingIntent);
 
         return session;

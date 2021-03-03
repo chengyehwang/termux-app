@@ -1,4 +1,4 @@
-package com.termux.terminal;
+package com.termuxPlus.terminal;
 
 /**
  * Implementation of wcwidth(3) for Unicode 9.
@@ -7,9 +7,9 @@ package com.termux.terminal;
  *
  * IMPORTANT:
  * Must be kept in sync with the following:
- * https://github.com/termux/wcwidth
- * https://github.com/termux/libandroid-support
- * https://github.com/termux/termux-packages/tree/master/libandroid-support
+ * https://github.com.termuxPlus/wcwidth
+ * https://github.com.termuxPlus/libandroid-support
+ * https://github.com.termuxPlus/termux-packages/tree/master/libandroid-support
  */
 public final class WcWidth {
 

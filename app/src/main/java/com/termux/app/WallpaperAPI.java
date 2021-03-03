@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.app.Service;
 import android.app.WallpaperManager;
@@ -9,8 +9,8 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.IBinder;
 
-import com.termux.app.util.ResultReturner;
-import com.termux.app.util.TermuxApiLogger;
+import com.termuxPlus.app.util.ResultReturner;
+import com.termuxPlus.app.util.TermuxApiLogger;
 
 import java.io.IOException;
 import java.io.InputStream;

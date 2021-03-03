@@ -1,4 +1,4 @@
-package com.termux.app;
+package com.termuxPlus.app;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.termux.BuildConfig;
+import com.termuxPlus.BuildConfig;
 
 import java.io.BufferedReader;
 import java.io.File;
